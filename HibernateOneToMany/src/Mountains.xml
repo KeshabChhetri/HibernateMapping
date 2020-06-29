@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+        <hibernate-mapping>
+        <class name ="OneToMany.Mountains" table="Mountains">
+        <id name="Mid" column ="Mid"/>
+        <property name ="Mname" column ="Mname" length ="50"/>
+        <property name ="Mheight" column ="Mheight" />
+        <property name ="FKid" column="FKid" insert ="false"></property>
+         </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+        <hibernate-mapping>
+        <class name="OneToMany.Location" table="Location">
+        <id name="Lid" column="Lid" />
+        <property name ="Lcountry" column="Lcountry" length="20"/>
+        <map name="N" cascade="all">
+        <key column="FKid"></key>
+        <index column="Mapping" type="string"></index>
+        <one-to-many class="OneToMany.Mountains"/>
+        
+   
+        </map>
+        
+        </class>
+</hibernate-mapping>
