@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+        <hibernate-mapping>
+        <class name ="com.OneToOne.Player" table="Player">
+        <id name="Pid" column ="Pid"/>
+        <property name ="Pname" column ="Pname" length ="50"/>
+        <property name ="Pgoal" column ="Pgoal" />
+        
+                </class>
+</hibernate-mapping>
