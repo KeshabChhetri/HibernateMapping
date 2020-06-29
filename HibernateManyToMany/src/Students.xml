@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        
+        <hibernate-mapping>
+        <class name ="com.ManyToMany.Students" table="Students">
+        <id name="Sid" column ="Sid"/>
+        <property name ="Sname" column ="Sname" length ="50"/>
+        <property name ="Smark" column ="Smark" />
+        <set name="Course" cascade="all" table="Student_Course">
+        <key column = "S_id"/>
+        <many-to-many class="com.ManyToMany.Course" column="C_id"></many-to-many>
+        
+        </set>
+        
+                </class>
+</hibernate-mapping>
